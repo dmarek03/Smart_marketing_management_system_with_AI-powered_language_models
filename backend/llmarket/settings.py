@@ -17,7 +17,7 @@ from environ import Env
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = Env()
-env_path = Path(BASE_DIR.joinpath('.env'))
+env_path = BASE_DIR.parent.parent.joinpath('.env')
 env.read_env(env_path)
 
 # Quick-start development settings - unsuitable for production
